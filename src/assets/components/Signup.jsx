@@ -26,7 +26,8 @@ const Signup = () => {
     const endpoint = role === 'admin' ? '/adminsignup' : '/signup';
 
     try {
-      const res = await fetch(`http://localhost:3000${endpoint}`, {
+      const API_BASE_URL = import.meta.env.VITE_API_URL; // only change
+      const res = await fetch(`${API_BASE_URL}${endpoint}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"
