@@ -7,6 +7,8 @@ const Admin = () => {
   const { userData, setUserData } = useContext(UserContext);
   const navigate = useNavigate();
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL; // ✅ Use environment variable here
+
   useEffect(() => {
     console.log("✅ Updated userData:", userData);
   }, [userData]);
@@ -19,7 +21,7 @@ const Admin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3000/admin", {
+    fetch(`${API_BASE_URL}/admin`, {  // ✅ Updated API
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loginData)

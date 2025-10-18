@@ -49,6 +49,8 @@ const AdminDash = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
+    const API_BASE_URL = import.meta.env.VITE_API_URL; // ✅ Use environment variable here
+
     useEffect(() => {
         if (userData?.taskAssignArray) {
             setTasks(userData.taskAssignArray);
@@ -64,7 +66,7 @@ const AdminDash = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch(`http://localhost:3000/admindash/${userData?._id}`, {
+            const response = await fetch(`${API_BASE_URL}/admindash/${userData?._id}`, { // ✅ Updated API
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),

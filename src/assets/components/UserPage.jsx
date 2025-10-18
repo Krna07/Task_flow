@@ -24,6 +24,8 @@ const UserPage = () => {
   const [category, setCategory] = useState('');
   const { register, handleSubmit, reset } = useForm();
 
+  const API_BASE_URL = import.meta.env.VITE_API_URL; // ✅ Use environment variable here
+
   const sanskritQuotes = [
     "सर्वे भवन्तु सुखिनः। सर्वे सन्तु निरामयाः।",
     "अहिंसा परमो धर्मः।",
@@ -41,7 +43,6 @@ const UserPage = () => {
     const randomQuote = sanskritQuotes[Math.floor(Math.random() * sanskritQuotes.length)];
     setQuote(randomQuote);
 
-    // Load local data
     const storedData = localStorage.getItem('userData');
     if (storedData) {
       setUserData(JSON.parse(storedData));
@@ -68,7 +69,7 @@ const UserPage = () => {
     setCategory('');
 
     try {
-      const res = await fetch(`http://localhost:3000/user/${userData?.userId}`, {
+      const res = await fetch(`${API_BASE_URL}/user/${userData?.userId}`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newTask),
@@ -91,7 +92,7 @@ const UserPage = () => {
 
     if (!isAssignedVisible && assignedTasks.length === 0) {
       try {
-        const res = await fetch("http://localhost:3000/notifications", {
+        const res = await fetch(`${API_BASE_URL}/notifications`, {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: userData?.email }),
@@ -104,6 +105,7 @@ const UserPage = () => {
     }
   };
 
+  // Rest of your JSX remains the same
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-indigo-100 via-white to-indigo-50 font-sans">
       {/* Sidebar */}
@@ -197,7 +199,7 @@ const UserPage = () => {
             </form>
           </div>
 
-          {/* Task List */}
+          {/* Task List and Assigned Tasks */}
           {isVisible && (
             <div className="lg:col-span-2 bg-white/80 backdrop-blur-md border border-gray-200 p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Your Tasks</h3>
@@ -218,7 +220,6 @@ const UserPage = () => {
             </div>
           )}
 
-          {/* Assigned Tasks */}
           {isAssignedVisible && (
             <div className="lg:col-span-2 bg-white/80 backdrop-blur-md border border-gray-200 p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Assigned Tasks</h3>

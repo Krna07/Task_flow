@@ -24,7 +24,9 @@ const Login = () => {
     e.preventDefault();
     console.log('Login Data:', loginData);
 
-    fetch("http://localhost:3000/login", {
+    const API_BASE_URL = import.meta.env.VITE_API_URL; // only change here
+
+    fetch(`${API_BASE_URL}/login`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
