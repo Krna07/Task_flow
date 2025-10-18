@@ -1,0 +1,736 @@
+  /* Global Reset */
+  * {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+  }
+
+  html, body {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Signup Page */
+  .sign {
+    position: absolute;
+    background-color: #F96B69;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sighup {
+    position: absolute;
+    top: 40%;
+    height: 100%;
+  }
+
+  #email, #username, #password {
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 3vw;
+    width: 20vw;
+  }
+
+  .sighup button {
+    position: absolute;
+    bottom: 60%;
+    width: 20vw;
+    height: 3vw;
+    background-color: white;
+    color: #F96B69;
+    border: none;
+  }
+
+  .Task {
+    top: 20%;
+  }
+
+  .sighup input {
+    margin-top: 10px;
+  }
+  .gotologin{
+    position: absolute;
+    background-color: #F96B69;
+    border: none;
+    bottom: 8vw;
+    right: 43vw;
+    padding: 3px;
+    border-radius: 0.5vw;
+    font-weight: 700;
+  }
+  .gotologin:hover{
+    transform: scale(1.1);
+    background-color: royalblue;
+  }
+
+  /* Login Page */
+  .login-container {
+    position: relative;
+    background-color: #f87371;
+    height: 65vw;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .loginbody{
+    
+    display: flex;
+    position: relative;
+  }
+  .loginimage{
+    width: 60%;
+    background-image: url('C:\Users\Tusha\OneDrive\Desktop\Task_manage\Frontend\src\assets\components\pexels-mart-production-7718707.jpg');
+    background-position: center;
+    background-size: contain;
+    
+  }
+
+  .login-box {
+    position: absolute;
+    top: 25%;
+  }
+
+  .login-box button {
+    position: absolute;
+    top: 20vw;
+    height: 2vw;
+    background-color: white;
+    border: none;
+    color: #F96B69;
+    width: 100%;
+  }
+
+  .back2s {
+    position: absolute;
+    bottom: 50vw;
+    height: 2vw;
+    background-color: white;
+    border: none;
+    color: #F96B69;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .back2s button {
+    border: none;
+    background-color: white;
+    color: #F96B69;
+  }
+
+  /* User Page Header */
+  .userhead {
+    /* position: absolute; */
+    color: #000000;
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+  }
+  .greet{
+    color: #5B11C5;
+    position: absolute;
+    top: 12vw;
+    right:  20.5%;
+    padding: 0.5vw;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    width: fit-content;
+    height: fit-content;
+    transition: 0.5s;
+    font-size: 2.5vw;
+  }
+  .greet:hover{
+    color: #34829A;
+    border-bottom: 2px solid black;
+  }
+  .image {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    background-color: #ded1d1;
+    right: 20%;
+    border-radius: 50%;
+    background-image: url(C:\Users\Tusha\OneDrive\Desktop\Task_manage\Frontend\src\assets\components\2008920.jpg);
+    background-size: cover;
+    background-position: center;
+  
+
+  }
+
+  .image div {
+    background-color: red;
+    height: 3vw;
+    width: 3vw;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .userbody {
+    background-color: white;
+  
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw;
+  }
+
+  .userbody h2 {
+    color: black;
+    font-size: 3vw;
+    margin: 2vw 10%;
+  }
+
+  /* Category List */
+  .category {
+    margin: 3vw 10%;
+    display: flex;
+    gap: 0.8vw;
+    /* overflow-x: auto; */
+  }
+
+  .category span {
+    color: black;
+    font-size: 2.5vw;
+    font-weight: 800;
+
+  }
+
+  .categorytask {
+    background-color: #f87371;
+    height: 6vw;
+    width: 10vw;
+    border-radius: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  #green {
+    border: 2px solid white;
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 1000;
+    padding: 3px;
+    background-color: aquamarine; }
+  #pink {
+    border: 2px solid white;
+    
+    font-size: 1.5vw;
+    font-weight: 1000;
+    padding: 3px;
+    background-color: rgb(252, 166, 181); }
+  #yellow { 
+    border: 2px solid white;
+    color: black;
+    font-size: 1.5vw;
+    font-weight: 1000;
+    padding: 3px; background-color: rgba(226, 226, 40, 0.756); }
+  #blue { 
+    border: 2px solid white;
+    
+    font-size: 1.5vw;
+    font-weight: 1000;
+    padding: 3px; background-color: #61c0f7; }
+  #red { 
+    border: 2px solid white;
+    color: black; font-size: 1.5vw;
+    font-weight: 1000;
+    padding: 3px; background-color: crimson; }
+
+
+
+  #green, #pink, #yellow, #blue, #red {
+    transition: all 0.3s ease;
+  }
+  .mar{
+    background-color: black;
+    position: absolute;
+    width: 60%;
+    top: 7vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    border-right: 5px solid red;
+    border-bottom-right-radius: 3vw;
+    box-shadow: 2px 2px 2px rgb(252, 111, 111);
+
+  }
+  .mar marquee{
+    font-size: 2vw;
+  }
+  #green:hover, #pink:hover, #yellow:hover, #blue:hover, #red:hover {
+    transform: scale(1.1);
+    background-color: red;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  /* Add Task Input & Button */
+  .details input {
+    margin: 4vw 10% 2vw;
+    width: 75%;
+    height: 15vw;
+    background-color: rgb(234, 238, 241);
+    border-radius: 2vw;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 1vw;
+    border: none;
+  }
+
+  .details button {
+    display: block;
+    margin: 1vw auto;
+    height: 3vw;
+    width: 13vw;
+    background-color: green;
+    border: none;
+    border-radius: 5vw;
+    transition: all 0.2s ease;
+  }
+
+  .details button:hover {
+    background-color: rgb(0, 85, 255);
+    transform: scale(1.1);
+  }
+
+
+
+  /* Task Cards List Wrapper */
+  .alltask-container {
+    background-color: rgba(0, 0, 0, 0.478);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 3vw 10%;
+    max-height: 80vh; 
+    max-width: 45vw;   /* ✅ set a max height */
+    overflow-y: auto;   /* ✅ enable vertical scroll */
+    position: absolute;
+    top: 9vw;
+    left: 5vw;
+    border-bottom: 0.5vw solid rgba(0, 128, 0, 0.576);
+    border-top: 0.5vw solid rgb(255, 0, 0);
+    /* border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw ;
+    border-top-right-radius: 2vw;
+    border-top-left-radius: 5vw ; */
+  }
+
+
+  /* Single Task Card Block */
+  .all {
+    
+    display: flex;
+    justify-content: space-between;
+    color: black;
+
+    width: 22vw;
+    padding: 1vw;
+    border-radius: 2vw;
+
+    position: relative;
+  }
+
+  /* Task Card */
+  .taskcard {
+    height: 20vw;
+    width: 20vw;
+    background-color: black;
+    padding: 2vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .taskcard:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+  }
+
+  .today h1 {
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+  }
+
+
+  .today h2 {
+    font-size: 1.5vw;
+  }
+
+  .uhave {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    background-color: rgb(55, 53, 53);
+    width: 80%;
+    height: 7vw;
+    padding: 10px;
+    border-radius: 1vw;
+
+  }
+
+  /* Card Buttons */
+  .response {
+    display: flex;
+    justify-content: space-around;
+    gap: 1vw;
+  }
+
+  .response #b1, .response #b2 {
+    height: 3vw;
+    background-color: #f87371;
+    padding: 0.5vw;
+    border: none;
+    border-radius: 0.5vw;
+    transition: all 0.2s ease;
+  }
+
+  .response #b1:hover {
+    background-color: rgb(2, 150, 101);
+    transform: scale(1.1);
+  }
+
+  .response #b2:hover {
+    background-color: red;
+    transform: scale(1.1);
+  }
+
+  .showtasks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border-bottom: 1px solid grey;
+
+  }
+  .showtasks:hover{
+    background-color: #aadffd;
+  }
+  .showtasks.active {
+    background-color: royalblue;
+    color: white;
+  }
+  .logocontainer{
+    height: 20%;
+    width: 70%;
+    
+    background-image: url(C:\Users\Tusha\OneDrive\Desktop\Task_manage\Frontend\src\assets\components\Gemini_Generated_Image_dukpofdukpofdukp-removebg-preview.png);
+    background-position: center;
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+  .showcategory{
+    background-color: rgb(234, 238, 241);;
+    height: 3vw;
+    padding: 10px;
+    width: fit-content;
+    position: absolute;
+    left: 20vw;
+    top: 30.5vw;
+    color: black;
+    font-size: 1.6vw;
+    font-weight: 1000;  
+    border-top: 2px solid royalblue;
+    font-style: italic;
+
+  }
+
+  .rgb{
+    position: absolute;
+    width: 15vw;
+    height: fit-content;
+    top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+  }
+  .r,.g,.b{
+    background-color: red;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0.5s;
+  }
+  .g{background-color: green;}
+  .b{background-color: royalblue;}
+
+  @keyframes blink{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.1);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  #signup{
+    position: absolute;
+    background-color: #f78482;
+    border: none;
+    bottom: 20vw;
+    left: 13vw;
+    padding: 3px;
+    border-radius: 0.5vw;
+    font-weight: 700;
+    padding: 5px;
+  }
+  #signup:hover{
+    background-color: royalblue;
+  }
+
+  .addtasks:hover{
+    border: 1.5px solid white;
+    box-shadow: 2px 3px 5px 0  #000000;
+  }
+
+  .rotate{
+    color: #000000;
+    position: absolute;
+    background-color: rgba(220, 40, 40, 0.968);
+    bottom: 15vw;
+    right: 2vw;
+    width: fit-content;
+    padding: 5px;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vw;
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0.5s;
+    transition: 0.5s;
+    border: 2px solid royalblue;
+    font-weight: 1000;
+  }
+  .rotate a{
+    text-decoration: none;
+  }
+  .rotate:hover{
+    background-color: red;
+  }
+  .today h2{
+    color: white;
+    /* background-color: #F96B69; */
+    position: absolute;
+    top: 3.2vw;
+    left: 0;
+    padding: 0.1vw;
+  }
+
+  .admin{
+    position: absolute;
+    text-decoration: none;
+    top: 47vw;
+    left: 49vw;
+    border: none;
+    padding: 0.5vw;
+    background-color: white;
+    color:#f78482;
+    border-radius: 0.5vw;
+    font-weight: 700;
+
+  }
+  .admin:hover{
+    background-color: rgb(210, 210, 210);
+    color: black;
+  }
+  .adminlog{
+    position: absolute;
+    bottom: 49vh;
+  }
+  .notification{
+    color: #000000;
+    background-color: white;
+    height: 8vh;
+    width: 100%;
+    top: 25vh;
+    padding: 5px;
+    transition: all ease 0.2s;
+    border: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border-bottom: 2px solid grey;
+    
+  } 
+  .notification:hover{
+    /* transform: scale(1.1); */
+  
+    /* box-shadow: 1px 2px 3px 4px rgba(0,0,0,0.2); */
+    /* margin-left: 1vh; */
+    background-color: #aadffd;
+  
+  }
+  .showNoti{
+    background-color: #26161659;
+    position: absolute;
+    color: #000000;
+    height: max-content;
+    width: 40vh;
+    color: red;
+    left: 12vh;
+    top: 25vh;
+    padding: 8px;
+  }
+  .showNotih{
+    display: none;
+  }
+
+
+  /* issue card */
+
+  .issue-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 12px;
+    color: #e0e0e0;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    width: 300px;
+  }
+
+  .issue-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .issue-tags {
+    margin-bottom: 10px;
+  }
+
+  .issue-label {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .issue-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .issue-id {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .checkmark {
+    color: black;
+    font-weight: bold;
+  }
+
+  .issue-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: gray;
+  }
+
+  .circle {
+    background-color: #2d2f38;
+    padding: 3px 6px;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+
+  .trend {
+    color: red;
+    font-size: 14px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .hair {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 12px;
+    height: 6px;
+    border-radius: 4px;
+  }
+
+
+  .bigman {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .bigman__lefnav {
+    width: 18%;
+    background-color: white;
+    height: 100vh;
+    border-right: 1px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+
+  .notescreen {
+    position: absolute;
+    width: 90%;
+    height: 100vh;
+    left: 20%;
+  }
