@@ -11,6 +11,18 @@ import AssignedTasks from './assets/components/Admin/AssignedTasks';
 import { AdminSign } from './assets/components/Admin/AdminSign';
 import TaskCard from './assets/components/Admin/TaskCard';
 import LandingPage from './assets/components/LandingPage';
+import { ContactUs } from './assets/components/ContactUs';
+
+// const Protectedroute = ({children})=>{
+
+//   if(localStorage.getItem("userData")){
+//     return children
+//   }
+//   else{
+//     return <Signup/>
+//   } 
+
+// }
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -21,6 +33,7 @@ function App() {
       <Route path="/land" element={<LandingPage/>} />
       <Route path="/" element={<Signup />} />
       {/* <Route path="/" element={<TaskCard/>} /> */}
+      
       <Route path="/login" element={<Login />} />
       <Route path="/user/:userId" element={<UserPage />} />
       <Route path='/adminSign' element={<AdminSign/>}/>
@@ -28,6 +41,7 @@ function App() {
       <Route path='/assignedTask' element={<AssignedTasks/>}></Route>
       <Route path='/adminsignup' element={<Signup/>}/>
       <Route path='/adminlogin' element={<Admin/>}/>
+      <Route path='/Contact' element={<ContactUs/>}/>
      </Routes>
      
     </>

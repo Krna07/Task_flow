@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from './UserProvider';
+import { useNavigate } from 'react-router-dom';
 
 // --- Icons ---
 const TaskIcon = () => (
@@ -23,6 +24,7 @@ const UserPage = () => {
   const [quote, setQuote] = useState('');
   const [category, setCategory] = useState('');
   const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
 
   const API_BASE_URL = import.meta.env.VITE_API_URL; 
 
@@ -169,6 +171,22 @@ const UserPage = () => {
                 <TaskIcon />
                 <span className="hidden md:inline">My Tasks</span>
               </button>
+
+              <button
+                onClick={()=> {
+                  setUserData(null);
+                  localStorage.removeItem('userData');
+                  navigate('/land');
+                  setTimeout(() => {
+                    window.location.reload();
+                  }, 3000);
+                }}
+                className={`flex items-center gap-2 md:gap-3 font-semibold px-3 py-2 md:px-4 md:py-2.5 rounded-xl transition-all ${isVisible ? 'bg-indigo-600 text-white shadow-lg scale-105' : 'text-gray-700 hover:bg-indigo-100 hover:scale-105'}`}
+              >
+                <TaskIcon />
+                <span className="hidden md:inline">LogOut ➜</span>
+              </button>
+
             </li>
           </ul>
         </div>
