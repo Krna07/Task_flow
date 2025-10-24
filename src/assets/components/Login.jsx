@@ -50,7 +50,7 @@ const Login = () => {
       {/* Login Form */}
       <div className="login-container bg-white/90 backdrop-blur-xl shadow-2xl rounded-2xl p-8 w-full max-w-md transform transition-all duration-500 hover:scale-105">
         <h1 className="text-4xl font-extrabold text-purple-700 mb-8 text-center animate-pulse">
-          Task_Management Login
+          TaskFlow Login
         </h1>
 
         <form onSubmit={handleLoginSubmit} className="flex flex-col gap-4">

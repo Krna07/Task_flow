@@ -52,9 +52,10 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-8 tracking-wide drop-shadow-lg animate-pulse">
-        Task_Management
-      </h1>
+<h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 tracking-wide drop-shadow-lg text-center animate-pulse">
+  Welcome to TaskFlow
+</h1>
+
 
       <div className="bg-white/90 backdrop-blur-xl shadow-2xl rounded-2xl p-8 w-full max-w-md transform transition-all duration-500 hover:scale-105">
         <form method="post" onSubmit={handleSubmit} className="flex flex-col gap-4">
