@@ -103,11 +103,11 @@ const Signup = () => {
           </button>
         </form>
 
-        <a href="/adminlogin" className="block mt-4">
+        <Link to="/adminlogin" className="block mt-4">
           <button className="w-full bg-gradient-to-r from-pink-500 to-red-500 text-white font-bold py-3 rounded-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
             Sign in As Admin
           </button>
-        </a>
+        </Link>
       </div>
 
       <div className="mt-6 flex flex-col gap-3 w-full max-w-md">
