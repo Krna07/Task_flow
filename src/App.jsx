@@ -12,6 +12,7 @@ import { AdminSign } from './assets/components/Admin/AdminSign';
 import TaskCard from './assets/components/Admin/TaskCard';
 import LandingPage from './assets/components/LandingPage';
 import { ContactUs } from './assets/components/ContactUs';
+import ProtectedRoute from './assets/components/ProtectedRoute';
 
 // const Protectedroute = ({children})=>{
 
@@ -35,7 +36,11 @@ function App() {
       {/* <Route path="/" element={<TaskCard/>} /> */}
       
       <Route path="/login" element={<Login />} />
-      <Route path="/user/:userId" element={<UserPage />} />
+      <Route path="/user/:userId" element={
+      <ProtectedRoute>
+         <UserPage />
+      </ProtectedRoute>
+      } />
       <Route path='/adminSign' element={<AdminSign/>}/>
       <Route path='/admindash/:adminId' element={<AdminDash/>}/>
       <Route path='/assignedTask' element={<AssignedTasks/>}></Route>

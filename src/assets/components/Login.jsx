@@ -38,6 +38,7 @@ const Login = () => {
       console.log("Login response:", data);
       if (data.message === "Login successful!") {
         setUserData(data);
+        localStorage.setItem('userData', JSON.stringify(data));
         navigate(`/user/${data.userId}`);
       }
     })

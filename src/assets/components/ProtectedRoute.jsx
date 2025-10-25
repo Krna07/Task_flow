@@ -1,16 +1,16 @@
 import React from 'react'
 import Login from './Login';
+import { Navigate } from 'react-router-dom';
 const ProtectedRoute = ({children}) => {
 
     // const navigate = useNavigate();
     
-    if(localStorage.getItem("userData")){
-        return children
+    const isAuthenticated = localStorage.getItem('userData');
+    if(!isAuthenticated){
+        return <Navigate to="/login" replace />;
     }
-    else{
-        return <Login/>
 
-    }   
+    return children;
 
 
 }
